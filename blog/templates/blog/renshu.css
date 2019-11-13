@@ -1,0 +1,390 @@
+body{font-family: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; max-width: 1000px;}
+
+img{max-width: 100%;}
+
+footer{text-align: center;}
+
+h1{
+    color: black;
+    font-weight: bold;
+    font-size: 36px;
+    background-color: white;
+}
+
+h2{
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: white;
+}
+
+img.ilust2{
+    max-width: 40%;
+}
+
+figcaption{
+    font-size: 12px;
+}
+
+.center{
+    margin: auto 0;
+}
+
+.text_center{
+    text-align: center;
+}
+
+.text_left{
+    text-align: left;
+}
+
+.red{
+    color: red
+}
+
+.ma-ka-{
+    background: linear-gradient(transparent 80%, yellow 80%);
+}
+
+.kakomi-maru1 {
+    margin: 2em auto;
+    padding: 1em;
+    font-size: 24px;
+    width: 90%; /*幅の調節*/
+    color: #4682b4; /*文字色*/
+    background-color: #f7f7f7; /*背景色*/
+    background: linear-gradient(transparent 80%, yellow 80%)
+    border: 2px dashed #ccc; /*線の太さ・色*/
+    border-radius: 8px; /*角の丸み*/
+}
+
+.midashi2{
+    text-align: center;
+    color: white;
+    background-color: cadetblue;
+}
+
+p.small{
+    font-size: 14px;
+}
+
+ol {
+    counter-reset:number; /*数字をリセット*/
+    list-style-type: none!important; /*数字を一旦消す*/
+    padding: 0.3em 0.8em;
+    border: solid 2px #ffb107;
+}
+ol li {
+    border-bottom: dashed 1px orange;
+    position: relative;
+    padding: 0.5em 0.5em 0.5em 30px;
+    line-height: 1.5em;
+}
+ol li:before{
+    /* 以下数字をつける */
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    /*数字のデザイン変える*/
+    display:inline-block;
+    background: #ffb107;
+    color: white;
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-weight:bold;
+    font-size: 15px;
+    border-radius: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    /*以下 上下中央寄せのため*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+ol li:last-of-type {
+    border-bottom: none; /*最後のliの線だけ消す*/
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    color: black;
+    position:relative;
+    background: #f1f8ff;/*バーの色*/
+    line-height: 1.5;
+    padding: 0.5em;
+    margin-bottom: 4px;
+    border-left : solid 35px #5c9ee7;/*先の色＝アイコン裏の色*/
+    list-style-type: none!important;
+}
+
+ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f303";
+    position: absolute;
+    display: block;
+    padding: 0.5em;
+    width: 1.2em;
+    color: white; /*アイコン色*/
+    font-weight: 900;/*アイコンは太字にしない*/
+    text-align: center;
+    left : -35px; /*左端からのアイコンまでの距離*/
+    /*以下 上下中央寄せのため*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.midashi {
+  font-size: 30px;
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.btn-flat-double-border {
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #87cefa;
+  border: double 4px #87cefa;
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn-flat-double-border:hover {
+  background: #87cefa;
+  color: white;
+}
+
+
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_qa .cp_actab {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 0 1em 0;
+	color: #1b2538;
+}
+.cp_qa .cp_actab input {
+	position: absolute;
+	opacity: 0;
+}
+/* 質問 */
+.cp_qa .cp_actab label {
+	font-weight: bold;
+	line-height: 1.6em;
+	position: relative;
+	display: block;
+	margin: 0 0 0 0;
+	padding: 1em 2em 1em 2.5em;
+	cursor: pointer;
+	text-indent: 1em;
+	border-radius: 0.5em;
+	background: rgba(27,37,56,0.1);
+}
+.cp_qa .cp_actab label::before {
+	font-family: serif;
+	font-size: 1.5em;
+	margin-left: -2em;
+	padding-right: 0;
+	content: 'Q';
+}
+.cp_qa .cp_actab label:hover {
+	transition: all 0.3s;
+	color: #00838f;
+}
+/* --質問の＋アイコン */
+.cp_qa .cp_actab label::after {
+	font-size: 1.7em;
+	font-weight: bold;
+	line-height: 2em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: '+';
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	-webkit-transition: transform 0.4s;
+	        transition: transform 0.4s;
+}
+/* 答え */
+.cp_qa .cp_actab .cp_actab-content {
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0 0 0 2.5em;
+	-webkit-transition: max-height 0.2s;
+	        transition: max-height 0.2s;
+	border-radius: 0 0 0.5em 0.5em;
+}
+.cp_qa .cp_actab .cp_actab-content::before {
+	font-family: serif;
+	font-size: 1.5em;
+	position: absolute;
+	margin: 0.4em 0 0 -1em;
+	padding: 0;
+	content: 'A';
+}
+.cp_qa .cp_actab .cp_actab-content p {
+	margin: 1em 1em 1em 0;
+}
+/* 質問を開いた時の仕様 */
+/* --答えの高さ */
+.cp_qa .cp_actab input:checked ~ .cp_actab-content {
+	max-height: 40em;
+	border: 10px solid rgba(27,37,56,0.1);
+}
+/* 質問をクリックした時のアイコンの動き */
+.cp_qa .cp_actab input:checked ~ label {
+	color: #00838f;
+	border-radius: 0.5em 0.5em 0 0;
+}
+/* 質問をクリックした時の+の動き */
+.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.cp_button08 {
+    font-size: 22px;
+	display: inline-block;
+	width: 220px;
+	padding: 1em;
+	line-height: 1.4;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.2s, color 0.2s, width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+	color: #ffa500;
+	border: 1px solid #ffa500;
+	border-radius: 0.2em;
+	background: transparent;
+}
+.cp_button08:hover {
+	width: 260px;
+	color: #ffffff;
+	border-radius: 0.5em;
+	border: 1px solid #ffa500;
+	background-color: #ffa500;
+}
+.cp_button08:active {
+	border-color: #ffa500;
+	background-color: #ffa500;
+}
+.cp_button08:focus {
+	color: #ffa500;
+	border: 1px solid #7e57c2;
+}
+.cp_button08:focus:hover {
+	color: #ffffff;
+}
+
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #ffa500;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #deb887;
+  border-radius: 3px;
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.number{
+  font-family: "arial black";
+  font-weight: bold;
+  font-size: 20px;
+  color: darkorange;
+}
+
+.form1{
+  font-size: 12px;
+  padding: 0.3em;
+  width: 30%; /*幅の調節*/
+  background-color: #f7f7f7; /*背景色*/
+  border: 2px solid #ccc; /*線の太さ・色*/  
+}
+
+.form2{
+  padding: 0.3em;
+  width: 100%; /*幅の調節*/
+  background-color: white; /*背景色*/
+  border: 2px solid #ccc; /*線の太さ・色*/ 
+}
+
+input:not(#foo){
+    font-size: 1em;
+    border: none;
+    outline: 0;
+    width: 100%;
+}
+
+#foo{
+    font-size: 1em;
+    border: none;
+    outline: 0;
+}
+
+textarea{
+    font-size: 1em;
+    border: none;
+    outline: 0;
+    width: 100%;
+    font-family: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.required{
+    color: white;
+    background-color: deeppink;
+    border-radius: 5px;
+}
+
+.free_will{
+    color: white;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+
+.box13 {
+    width: 30%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: white;
+    background:#0000cd;
+    border-bottom: solid 6px #3f87ce;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.centering_parent {
+    text-align:  center;        /* 中央寄せ */
+}
+ 
+.centering_item {
+    width: 30%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: white;
+    background:#0000cd;
+    border-bottom: solid 6px #3f87ce;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: inline-block;      /* インラインブロックにする */
+}

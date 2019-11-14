@@ -1,18 +1,276 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>セイノーメンテック</title>
+
+    <link href="//use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <script src="//ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="text_center">自家発電設備は<span class="red">必要なときに</span>稼働しますか？</h1>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <img src="{% static "seinoshoukai1.png" %}">
+        </div>
+        <div>
+            <p>
+                <h2>主な提供サービスはこちら<br></h2>
+                <ol>
+                    <li>非常用発電機の負荷試験</li>
+                    <li>非常用発電機の整備</li>
+                    <li>設置工事</li>
+                </ol>
+                <h2>全て全国メーカーフリーで対応いたします！</h2>
+            </p>
+        </div>
+        <div class="text_center">
+            <a href="#cta" class="btn-flat-double-border">お問合せはこちら</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p class="kakomi-maru1"><span class="ma-ka-">東日本大震災では２３台もの発電設備が<br>メンテナンス不足で不始動・停止をしていました。</span></p>
         </div>
 
-        {% for post in posts %}
+        <figure>
+            <img src="{% static "graph1.png" %}">
+            <figcaption>※消防庁主催「消防用設備等点検報告制度のあり方に関する検討部会」配布資料から抜粋</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{% static "shoujo.png" %}">
+        </figure>
+
         <div>
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <ul>
+                <li>非常用発電機の点検・整備の計画を立てたいが、どこに相談すれば良いかか分からない…</li>
+                <li>非常用発電機の部品が無く、修理が出来ないと言われた…</li>
+                <li>非常時に備えた設備提案が欲しい…</li>
+            </ul>
         </div>
-        {% endfor %}
-    </body>
-</html>
+
+        <div>
+            <figure class="text_center"><img class="ilust2"  src="{% static "1611182.jpg" %}">
+            </figure>
+        </div>
+
+        <div class="text_center">
+            <figure>
+                <img src="{% static "sozai_cman_jp_20191030003044.png" %}">
+            </figure>
+            <p class="midashi">全てセイノーメンテックにお任せください</p>
+            <figure>
+                <img src="{% static "b70829d20ef7ae709fa720da4dc7ded9_m.jpg" %}">
+            </figure>
+        </div>
+
+        <figure>
+            <img src="{% static "nagare.png" %}">
+        </figure>
+
+        <div class="text_center">
+            <a href="#cta" class="btn-flat-double-border">お問合せはこちら</a>
+        </div>
+        <br>
+        <br>
+
+        <div>
+            <div class="cp_qa">
+                <div class="cp_actab">
+                    <input id="cp_tabfour031" type="checkbox" name="tabs">
+                    <label for="cp_tabfour031"><span class="number">１　</span>非常用発電機の負荷試験とは</label>
+                    <div class="cp_actab-content">
+                    <p>非常用発電機の負荷試験とは、発電機が確実に稼働するかどうかを確認するための試験です。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour032" type="checkbox" name="tabs">
+                    <label for="cp_tabfour032"><span class="number">２　</span>負荷試験は実施しているのですが？</label>
+                    <div class="cp_actab-content">
+                    <p>消防法基準の30%以上の負荷をかけた負荷試験を実施している可能性は低いと考えられます。確認が必要ですが、実際に基準値以上の負荷試験を実施している例は少ないのが現状です。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour033" type="checkbox" name="tabs">
+                    <label for="cp_tabfour033"><span class="number">３　</span>実負荷と疑似負荷試験の違いは何ですか？</label>
+                    <div class="cp_actab-content">
+                    <p>実負荷試験：実際に設置されている消防設備（スプリンクラーや消火設備など）に発電機から電機を流し行う負荷試験。施設の停電が必要な場合が多い。<br>疑似負荷試験：実際に設置されている消防設備を使わずに、負荷試験装置に発電機から電機を流し行う負荷試験。施設の停電は不要。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour034" type="checkbox" name="tabs">
+                    <label for="cp_tabfour034"><span class="number">４　</span>高圧の非常用発電機も作業可能ですか？</label>
+                    <div class="cp_actab-content">
+                    <p>負荷試験、整備、設置工事全て承ります。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour035" type="checkbox" name="tabs">
+                    <label for="cp_tabfour035"><span class="number">５　</span>現場調査費用はかかりますか？</label>
+                    <div class="cp_actab-content">
+                    <p>原則無料で承っております。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour036" type="checkbox" name="tabs">
+                    <label for="cp_tabfour036"><span class="number">６　</span>～の見積をお願いします。</label>
+                    <div class="cp_actab-content">
+                    <p>お問い合わせフォームよりお申し込み下さい。<br>
+                    メールにて折返しをさせて頂きます。お電話でのお問い合わせも対応可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <footer>
+        <div id="cta">
+            <h2 class="midashi2">お問い合せ</h2>
+        </div>
+
+        <div class="text_left">
+            <p>お問い合わせは下記フォームに必要事項を入力の上、「送信」ボタンをクリックしてください。<br>
+            ご連絡につきましては、順次対応させて頂いておりますが、内容によりましてはお時間を頂戴する場合がございますので、ご了承ください。<br></p>
+            <p class="small">※郵便番号をご入力頂ければ自動でご住所が入力されます。<br>
+            ※個人情報の取り扱いについてご入力いただきましたお客様の個人情報は、本お問合せに関するご連絡以外の目的には利用いたしません。<br></p>
+        </div>
+
+        <div class="text_left">
+        <table style="width: 95%" align="center">
+            <tbody>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　会　社　名
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）セイノーメンテック株式会社">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　担　当　者　名
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）西濃　太郎">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　郵　便　番　号　(7桁)
+                    </td>
+                    <td class="form2">
+                    <input id="foo" type="text" name="zip31" size="4" maxlength="3" placeholder="123"> － <input id="foo" type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');" placeholder="4567">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　都　道　府　県
+                    </td>
+                    <td class="form2">
+                    <input type="text" name="pref31" size="20" placeholder="例）東京都">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　ご　住　所
+                    </td>
+                    <td class="form2">
+                    <input type="text" name="addr31" size="40" placeholder="例）中央区日本橋浜町2丁目18番7号">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　電　話　番　号
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）03-3333-3333">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　メ　ー　ル　ア　ド　レ　ス
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）seino@smt.seino.co.jp">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　お　問　合　せ　種　類
+                    </td>
+                    <td class="form2">
+                    <input id="foo" type="radio" value="1" checked>　防　災　減　災　事　案　　　<input id="foo" type="radio" value="2">　発　電　機　の　整　備　・　点　検　<br>
+                    <input id="foo" type="radio" value="3">　代　理　店　・　パ　ー　ト　ナ　ー　　　<input id="foo" type="radio" value="3">　そ　の　他
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="free_will">　任　意　</span>　発　電　機　の　設　置　場　所
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）マンションの屋上、地下一階発電機室内">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="free_will">　任　意　</span>　電　圧
+                    </td>
+                    <td class="form2">
+                    <input id="foo" type="radio" value="1" checked>　低　圧　　　<input id="foo" type="radio" value="2">　高　圧
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="free_will">　任　意　</span>　発　電　機　の　容　量
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）○○○KVA">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="free_will">　任　意　</span>　負　荷　試　験　機　か　ら　発　電　機　ま　で　の　距　離
+                    </td>
+                    <td class="form2">
+                    <input type="text"  placeholder="例）○○○m">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form1">
+                    <span class="required">　必　須　</span>　お　問　い　合　わ　せ　内　容
+                    </td>
+                    <td class="form2">
+                        <textarea name="content" rows="5"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div>
+            <p class="text_center"><input id="foo" type="checkbox">スパムメール防止の為、こちらのチェックボックスにチェックを入れてから送信してください。</p>
+        </div>
+
+        <br>
+
+        <div>
+            <a href="#" class="cp_button08">上記内容で送信する</a>
+        </div>
+
+        <br>
+
+        <div class="centering_parent">
+            <div class="centering_item">
+                お電話でお問合せ<br>
+                TEL　０３－３６６７－００９０<br>
+                受付時間　9:00～17:00
+            </div>
+        </div>
+
+    </footer>
+</body>

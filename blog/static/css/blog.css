@@ -1,0 +1,139 @@
+h1{
+    color: black;
+    font-weight: bold;
+    font-size: 36px;
+    background-color: white;
+}
+
+h2{
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: white;
+}
+
+
+
+.red{
+    color: red
+}
+
+.ma-ka-{
+    background: linear-gradient(transparent 80%, yellow 80%);
+}
+
+.kakomi-maru1 {
+    margin: 2em auto;
+    padding: 1em;
+    font-size: 24px;
+    width: 90%; /*幅の調節*/
+    color: #4682b4; /*文字色*/
+    background-color: #f7f7f7; /*背景色*/
+    background: linear-gradient(transparent 80%, yellow 80%)
+    border: 2px dashed #ccc; /*線の太さ・色*/
+    border-radius: 8px; /*角の丸み*/
+}
+
+.midashi2{
+    text-align: center;
+    color: white;
+    background-color: cadetblue;
+}
+
+p.small{
+    font-size: 14px;
+}
+
+ol {
+    counter-reset:number; /*数字をリセット*/
+    list-style-type: none!important; /*数字を一旦消す*/
+    padding: 0.3em 0.8em;
+    border: solid 2px #ffb107;
+}
+ol li {
+    border-bottom: dashed 1px orange;
+    position: relative;
+    padding: 0.5em 0.5em 0.5em 30px;
+    line-height: 1.5em;
+}
+ol li:before{
+    /* 以下数字をつける */
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    /*数字のデザイン変える*/
+    display:inline-block;
+    background: #ffb107;
+    color: white;
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-weight:bold;
+    font-size: 15px;
+    border-radius: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    /*以下 上下中央寄せのため*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+ol li:last-of-type {
+    border-bottom: none; /*最後のliの線だけ消す*/
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    color: black;
+    position:relative;
+    background: #f1f8ff;/*バーの色*/
+    line-height: 1.5;
+    padding: 0.5em;
+    margin-bottom: 4px;
+    border-left : solid 35px #5c9ee7;/*先の色＝アイコン裏の色*/
+    list-style-type: none!important;
+}
+
+ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f303";
+    position: absolute;
+    display: block;
+    padding: 0.5em;
+    width: 1.2em;
+    color: white; /*アイコン色*/
+    font-weight: 900;/*アイコンは太字にしない*/
+    text-align: center;
+    left : -35px; /*左端からのアイコンまでの距離*/
+    /*以下 上下中央寄せのため*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.midashi {
+  font-size: 30px;
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.btn-flat-double-border {
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #87cefa;
+  border: double 4px #87cefa;
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn-flat-double-border:hover {
+  background: #87cefa;
+  color: white;
+}

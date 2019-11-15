@@ -1,21 +1,21 @@
 h1{
-    color: black;
+    color: #000000;
     font-weight: bold;
     font-size: 36px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 h2{
-    color: black;
+    color: #000000;
     font-weight: bold;
     font-size: 24px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 
 
 .red{
-    color: red
+    color: #ff0000;
 }
 
 .ma-ka-{
@@ -36,7 +36,7 @@ h2{
 
 .midashi2{
     text-align: center;
-    color: white;
+    color: #ffffff;
     background-color: cadetblue;
 }
 
@@ -64,7 +64,7 @@ ol li:before{
     /*数字のデザイン変える*/
     display:inline-block;
     background: #ffb107;
-    color: white;
+    color: #ffffff;
     font-family: 'Avenir','Arial Black','Arial',sans-serif;
     font-weight:bold;
     font-size: 15px;
@@ -88,7 +88,7 @@ ul {
 }
 
 ul li {
-    color: black;
+    color: #000000;
     position:relative;
     background: #f1f8ff;/*バーの色*/
     line-height: 1.5;
@@ -105,7 +105,7 @@ ul li:before {
     display: block;
     padding: 0.5em;
     width: 1.2em;
-    color: white; /*アイコン色*/
+    color: #ffffff; /*アイコン色*/
     font-weight: 900;/*アイコンは太字にしない*/
     text-align: center;
     left : -35px; /*左端からのアイコンまでの距離*/
@@ -135,5 +135,5 @@ ul li:before {
 }
 .btn-flat-double-border:hover {
   background: #87cefa;
-  color: white;
+  color: #ffffff;
 }
